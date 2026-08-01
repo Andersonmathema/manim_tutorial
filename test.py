@@ -1,10 +1,9 @@
 from manim import *
 
-class Ola(Scene):
+class Pith(Scene):
     def construct(self):
-        texto = Text("Olá, Manim!")
-        self.play(Write(texto))
-        self.wait()
 
-# no terminal
-# manim -pqh teste.py Ola
+        sq = Square(side_length=5).set_stroke(color=GREEN).set_fill(BLUE, opacity=0.75)
+
+        self.play(Create(sq), run_time=3)
+        self.wait()
